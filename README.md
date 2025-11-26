@@ -1,59 +1,37 @@
 # Audameal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+> **Audameal, ton MacroChef perso** : une application Web de recettes nutritives orientée meal prep (4/5 jours), snacks protéinés et petits plaisirs maîtrisés (cheat meals, desserts, etc.).
+> Toutes les recettes sont validées manuellement pour rester en cohérence avec les objectifs de l’application.
 
-## Development server
+## 🔍 Qu’est-ce que ce projet ?
 
-To start a local development server, run:
+Audameal est une application Web Angular qui permet de :
 
-```bash
-ng serve
-```
+- Parcourir des **recettes** (meal prep, recettes à l’unité, desserts, snacks, cheat meals intelligents).
+- Filtrer les recettes par :
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+  - macros (protéines, glucides, lipides, kcal),
+  - type de recette (meal prep, unique, dessert, snack, cheat),
+  - recherche par nom.
 
-## Code scaffolding
+- Consulter le détail d’une recette :
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+  - ingrédients, instructions, macros **par portion**, notes & conseils.
 
-```bash
-ng generate component component-name
-```
+- Créer un compte utilisateur, saisir son **objectif principal** (sèche / maintien / prise de masse) et ses infos de base.
+- Créer et proposer ses propres recettes, qui sont ensuite **validées manuellement** dans un espace admin.
+- Aimer (likes) et mettre en **favoris** des recettes.
+- Accéder à une **page profil** avec estimation des besoins caloriques (sèche / maintien / prise de masse).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Getting started
 
-```bash
-ng generate --help
-```
+> Run 'npm install'
+> Run 'npm start'
 
-## Building
+## DoD
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> Crate feature branch delivery
+> Open Pull Request to merge in 'develop'.
+> One reviewer is required.
+> CI steps are mandatory.
+> Then merge accepted !
