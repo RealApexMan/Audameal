@@ -1,0 +1,94 @@
+$audameal-primary: #13ec5b;
+$text-main: #111813;
+$text-muted: #61896f;
+$bg-surface: #ffffff;
+$border-subtle: #dbe6df;
+
+.home-showdown {
+  // SECTION HEADER
+  &__header {
+    max-width: 640px;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: $text-main;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    color: $text-muted;
+    margin: 0;
+  }
+
+  // CARD
+  &__card {
+    border-radius: 0.75rem;
+    border: 1px solid $border-subtle;
+    background-color: $bg-surface;
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  // IMAGE + TAG
+  &__image-wrapper {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      // keep images nicely framed
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 9999px;
+    background-color: rgba($audameal-primary, 0.95);
+    color: #111813;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  // TEXT
+  &__card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-main;
+    margin: 0;
+  }
+
+  &__macros {
+    font-size: 0.85rem;
+    color: $text-muted;
+    margin: 0;
+    line-height: 1.4;
+  }
+}

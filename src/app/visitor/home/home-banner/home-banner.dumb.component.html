@@ -1,0 +1,23 @@
+<section class="home-banner py-4 py-md-5">
+  <div class="container">
+    <div class="home-banner__hero">
+      <div class="home-banner__content text-center mx-auto">
+        <h1 class="home-banner__title">{{ title() }}</h1>
+
+        <p class="home-banner__subtitle">
+          {{ description() }}
+        </p>
+
+        <div class="home-banner__cta">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg home-banner__cta-btn"
+            (click)="clicked.emit()"
+          >
+            {{ button() }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

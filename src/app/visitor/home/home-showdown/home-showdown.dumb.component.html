@@ -1,0 +1,30 @@
+<section class="home-showdown py-4 py-md-5">
+  <div class="container">
+    <div class="home-showdown__header text-center mb-4">
+      <h2 class="home-showdown__title">Un aperçu de ce qui t’attend</h2>
+      <p class="home-showdown__subtitle">
+        Quelques recettes typiques que tu retrouveras dans l’espace membre.
+      </p>
+    </div>
+
+    <div class="row g-3">
+      @for(recipe of homeShowdownList(); track recipe.id) {
+      <div class="col-12 col-sm-6 col-lg-3">
+        <article class="home-showdown__card h-100">
+          <div class="home-showdown__image-wrapper">
+            <img [src]="recipe.imageUrl" [alt]="recipe.title" class="img-fluid" />
+            @if (recipe.tag) {
+            <span class="home-showdown__tag">{{ recipe.tag }}</span>
+            }
+          </div>
+          <h3 class="home-showdown__card-title">{{ recipe.title }}</h3>
+          <p class="home-showdown__macros">
+            P: {{ recipe.protein }}g · G: {{ recipe.carbs }}g · L: {{ recipe.fats }}g ·
+            {{ recipe.calories }} kcal
+          </p>
+        </article>
+      </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,147 @@
+$audameal-primary: #13ec5b;
+$bg-light: #f6f8f6;
+$border-light: #f0f4f2;
+$text-main: #111813;
+$text-muted: #6b7280;
+
+.main-navbar {
+  z-index: 1050;
+
+  &__backdrop {
+    background-color: rgba($bg-light, 0.9);
+    border-bottom: 1px solid $border-light;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  &__inner {
+    padding-block: 0.6rem;
+  }
+
+  // Brand
+  &__brand {
+    color: $text-main;
+
+    &:hover {
+      color: $text-main;
+    }
+  }
+
+  &__logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  &__logo-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  &__brand-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  // Toggler (mobile)
+  &__toggler {
+    color: $text-main;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+
+  &__toggler-icon {
+    font-size: 1.6rem;
+  }
+
+  // Menu container
+  &__menu {
+    // On desktop, align content to the right
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    // On mobile, full-width block under brand
+    @media (max-width: 767.98px) {
+      padding-top: 0.75rem;
+    }
+  }
+
+  // Links
+  &__links {
+    @media (min-width: 768px) {
+      margin-right: 1.5rem;
+      gap: 1.75rem;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__link-item {
+    @media (max-width: 767.98px) {
+      margin-bottom: 0.35rem;
+    }
+  }
+
+  &__link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $text-main;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($audameal-primary, 10%);
+    }
+  }
+
+  // Actions (buttons)
+  &__actions {
+    @media (max-width: 767.98px) {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__btn {
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    padding: 0.35rem 0.9rem;
+    line-height: 1.4;
+    white-space: nowrap;
+
+    &--primary {
+      background-color: $audameal-primary;
+      border-color: $audameal-primary;
+      color: $text-main;
+
+      &:hover,
+      &:focus {
+        background-color: darken($audameal-primary, 4%);
+        border-color: darken($audameal-primary, 4%);
+        color: $text-main;
+      }
+    }
+
+    &--secondary {
+      background-color: #e3ece6;
+      border-color: #e3ece6;
+      color: $text-main;
+
+      &:hover,
+      &:focus {
+        background-color: #d5e1da;
+        border-color: #d5e1da;
+        color: $text-main;
+      }
+    }
+  }
+}

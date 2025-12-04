@@ -1,0 +1,103 @@
+$audameal-primary: #13ec5b;
+$text-main: #111813;
+$text-muted: #61896f;
+$card-border: #dbe6df;
+$card-bg: #ffffff;
+
+.home-features {
+  &__wrapper {
+    border-radius: 0.75rem;
+    background-color: #f8faf9;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2rem; // ~32px
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    color: $text-main;
+
+    @media (min-width: 480px) {
+      font-size: 2.25rem;
+      font-weight: 800;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: $text-main;
+  }
+
+  &__cta-btn {
+    align-self: center;
+
+    @media (min-width: 768px) {
+      align-self: flex-start;
+    }
+
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    border-radius: 0.5rem;
+    padding-inline: 1.5rem;
+    margin-top: 0.5rem;
+
+    background-color: $audameal-primary;
+    border-color: $audameal-primary;
+    color: $text-main;
+
+    &:hover,
+    &:focus {
+      background-color: darken($audameal-primary, 4%);
+      border-color: darken($audameal-primary, 4%);
+      color: $text-main;
+    }
+  }
+
+  &__card {
+    border-radius: 0.5rem;
+    border: 1px solid $card-border;
+    background-color: $card-bg;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__card-icon {
+    font-size: 2.5rem;
+    color: $audameal-primary;
+    margin-bottom: 0.25rem;
+  }
+
+  &__card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0;
+    color: $text-main;
+  }
+
+  &__card-text {
+    font-size: 1.05rem;
+    margin: 0;
+    color: $text-muted;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="background">
+  <app-home-banner
+    title="Audameal, ton MacroChef perso"
+    description="Des recettes nutritives et gourmandes, pensées pour le meal prep, les snacks protéinés et les petits plaisirs maîtrisés."
+    button="Découvrir les recettes"
+    (clicked)="onBannerClicked()"
+  />
+  <app-homepage-feature-card-list [featureCardList]="featureCardList()" />
+
+  <app-home-showdown [homeShowdownList]="homeShowdownList()" />
+</div>

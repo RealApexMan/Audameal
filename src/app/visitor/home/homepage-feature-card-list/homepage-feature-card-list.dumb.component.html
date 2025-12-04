@@ -1,0 +1,34 @@
+<section class="home-features py-4 py-md-5">
+  <div class="container">
+    <div class="home-features__wrapper px-3 px-md-4 py-4 py-md-5">
+      <!-- Header + CTA (top) -->
+      <div class="home-features__header text-center text-md-start mb-4 mb-md-5">
+        <h2 class="home-features__title">Simplifiez votre nutrition</h2>
+
+        <p class="home-features__subtitle">
+          Nous vous proposons des recettes saines, simple, delicieux, et efficace.
+        </p>
+
+        <button type="button" class="btn btn-primary home-features__cta-btn">Découvrir</button>
+      </div>
+
+      <!-- Feature cards under header -->
+      <div class="row g-3">
+        @for(feature of featureCardList(); track feature.name) {
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="home-features__card h-100">
+            <div class="home-features__card-icon">
+              <i class="bi" [ngClass]="'bi-' + feature.icon"></i>
+            </div>
+            <h3 class="home-features__card-title">{{ feature.name }}</h3>
+            <p class="home-features__card-text">
+              {{ feature.description }}
+            </p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

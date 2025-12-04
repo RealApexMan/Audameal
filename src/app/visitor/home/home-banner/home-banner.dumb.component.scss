@@ -1,0 +1,76 @@
+$audameal-primary: #13ec5b;
+
+$home-banner-bg: url('/images/home-banner.png');
+
+.home-banner {
+  &__hero {
+    position: relative;
+    min-height: 480px;
+    border-radius: 0.75rem; // matches Tailwind rounded-xl
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%),
+      $home-banner-bg;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 479.98px) {
+      border-radius: 0; // like full-width on mobile in your original code
+    }
+  }
+
+  &__content {
+    max-width: 44rem; // similar to max-w-3xl
+    color: #ffffff;
+  }
+
+  &__title {
+    font-weight: 900;
+    letter-spacing: -0.033em;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+
+    font-size: 2.25rem; // ~text-4xl
+    @media (min-width: 480px) {
+      font-size: 3rem; // ~text-5xl
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+
+    font-size: 1rem;
+    @media (min-width: 480px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__cta-btn {
+    min-width: 160px;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    border-radius: 0.5rem;
+
+    background-color: $audameal-primary;
+    border-color: $audameal-primary;
+    color: #111813;
+
+    &:hover,
+    &:focus {
+      background-color: darken($audameal-primary, 4%);
+      border-color: darken($audameal-primary, 4%);
+      color: #111813;
+    }
+  }
+}
